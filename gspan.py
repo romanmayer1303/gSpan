@@ -15,7 +15,7 @@ def read_file(file):
                 g.add_node(int(l[1]), label=l[2])
             elif l[0] == 'e': #add edge
                 g.add_edge(int(l[1]), int(l[2]), label=l[3])
-            if l[0] == 't': #next graph
+            elif l[0] == 't': #next graph
                 graphs.append(g)
                 g = nx.Graph(id=line)
         graphs.append(g)
